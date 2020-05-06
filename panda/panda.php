@@ -4,7 +4,10 @@ if(!defined('STDOUT')) define('STDOUT', fopen('php://stdout', 'wb'));
 if(!defined('STDERR')) define('STDERR', fopen('php://stderr', 'wb'));
 
 $txt = fopen("panda.txt", "a");
-fwrite($txt, $_SERVER['REMOTE_ADDR'] . "\n");
+fwrite($txt, $_SERVER['HTTP_X_FORWARDED_FOR'] . "\n");
+
+//REMOTE_ADDR
+
 fclose($txt);
 
 header('Content-Type: image/JPEG');
