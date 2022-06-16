@@ -1,0 +1,2 @@
+Forum friendly IP grabber
+Can be made more sophisticated than simple access logs
